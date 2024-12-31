@@ -1,0 +1,88 @@
+{
+  "sneakers": [
+    {
+      "id": "1",
+      "model": "Nike Air Max 90",
+      "price": 130,
+      "condition": "New",
+      "image": "assets/sneakers/1.jpg"
+    },
+    {
+      "id": "2",
+      "model": "Nike Air Force 1",
+      "price": 120,
+      "condition": "New",
+      "image": "assets/sneakers/2.jpg"
+    },
+    {
+      "id": "3",
+      "model": "Nike Air Jordan 1",
+      "price": 200,
+      "condition": "New",
+      "image": "assets/sneakers/3.webp"
+    },
+    {
+      "id": "4",
+      "model": "Nike Dunk Low",
+      "price": 150,
+      "condition": "Used",
+      "image": "assets/sneakers/4.png"
+    },
+    {
+      "id": "5",
+      "model": "Nike Blazer Mid 77",
+      "price": 100,
+      "condition": "New",
+      "image": "assets/sneakers/5.png"
+    },
+    {
+      "id": "6",
+      "model": "Nike Pegasus 40",
+      "price": 130,
+      "condition": "New",
+      "image": "assets/sneakers/6.jpg"
+    },
+    {
+      "id": "7",
+      "model": "Nike Air Max 97",
+      "price": 170,
+      "condition": "New",
+      "image": "assets/sneakers/7.webp"
+    },
+    {
+      "id": "8",
+      "model": "Nike React Infinity Run",
+      "price": 160,
+      "condition": "New",
+      "image": "assets/sneakers/8.png"
+    },
+    {
+      "id": "9",
+      "model": "Nike Vapormax Plus",
+      "price": 220,
+      "condition": "Used",
+      "image": "assets/sneakers/9.jpg"
+    },
+    {
+      "id": "10",
+      "model": "Nike SB Dunk",
+      "price": 180,
+      "condition": "New",
+      "image": "assets/sneakers/10.png"
+    },
+    {
+      "id": "11",
+      "model": "Nike ZoomX Vaporfly",
+      "price": 250,
+      "condition": "New",
+      "image": "assets/sneakers/11.png"
+    },
+    {
+      "id": "12",
+      "model": "Nike Air Huarache",
+      "price": 120,
+      "condition": "New",
+      "image": "assets/sneakers/12.jpg"
+    }
+  ]
+}

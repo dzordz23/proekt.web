@@ -1,0 +1,98 @@
+<div class="listings">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Step Into Sneaker Heaven</h1>
+      <p>
+        Your ultimate destination for premium sneakers. Find your perfect pair
+        today!
+      </p>
+    </div>
+  </section>
+
+  <div class="filter-section">
+    <div class="filter-header">
+      <h2>Find Your Perfect Sneakers</h2>
+      <p>Use the filters below to customize your search.</p>
+    </div>
+    <div class="filter-items">
+      <div class="filter-item">
+        <div class="label-with-icon">
+          <i class="fas fa-search"></i>
+          <label for="search-model">Search by Model</label>
+        </div>
+        <input
+          id="search-model"
+          type="text"
+          placeholder="Enter model name..."
+          [(ngModel)]="searchQuery"
+          (input)="applyFilters()"
+        />
+      </div>
+      <div class="filter-item">
+        <div class="label-with-icon">
+          <i class="fas fa-list"></i>
+          <label for="condition">Filter by Condition</label>
+        </div>
+        <select
+          id="condition"
+          [(ngModel)]="selectedCondition"
+          (change)="applyFilters()"
+        >
+          <option value="">All Conditions</option>
+          <option value="New">New</option>
+          <option value="Used">Used</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <div class="label-with-icon">
+          <i class="fas fa-dollar-sign"></i>
+          <label for="max-price">Max Price</label>
+        </div>
+        <input
+          id="max-price"
+          type="number"
+          placeholder="Enter maximum price..."
+          [(ngModel)]="maxPrice"
+          (input)="applyFilters()"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Sneakers Grid -->
+  <div class="sneaker-grid">
+    <div class="sneaker-card" *ngFor="let sneaker of filteredSneakers">
+      <div class="image-container">
+        <img [src]="sneaker.image" [alt]="sneaker.model" />
+      </div>
+      <div class="details">
+        <h3>{{ sneaker.model }}</h3>
+        <p class="price">$ {{ sneaker.price }}</p>
+        <p class="condition">Condition: {{ sneaker.condition }}</p>
+      </div>
+      <div class="actions">
+        <a [routerLink]="['/edit-sneaker', sneaker.id]" class="btn btn-outline"
+          >Edit</a
+        >
+        <button (click)="openModal(sneaker)" class="btn btn-fill">
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div class="modal-backdrop" *ngIf="showModal">
+    <div class="modal">
+      <h3>Are you sure?</h3>
+      <p>
+        Do you really want to remove the sneaker "{{ selectedSneaker?.model }}"?
+      </p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" (click)="closeModal()">Cancel</button>
+        <button class="btn btn-fill" (click)="confirmRemove()">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
